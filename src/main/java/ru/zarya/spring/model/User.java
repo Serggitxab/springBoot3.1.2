@@ -19,4 +19,5 @@ public class User implements Serializable {
     @Column(name = "age")
     int age;
 
+
 }

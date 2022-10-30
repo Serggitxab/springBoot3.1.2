@@ -52,12 +52,12 @@ public class UserController {
         return "edit";
     }
 
-    @PostMapping("/{id}")
+    @PatchMapping("/{id}")
     public String update(@ModelAttribute("user") User user, @PathVariable("id") int id) {
         userService.updateUser(id, user);
         return "redirect:/showAll";
     }
-    @GetMapping("/{id}")
+    @DeleteMapping("/{id}")
     public String delete(@PathVariable("id") int id){
         userService.removeUser(id);
         return "redirect:/showAll";
